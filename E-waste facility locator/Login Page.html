@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body{
+            background-image: url('Img2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="Webcss.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            // Replace with your own authentication logic.
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // For demonstration purposes, we'll consider any non-empty input as a successful login.
+            if (username == "admin@gmail.com" && password== "admin123") {
+                window.location.href = "Loc.html"; // Redirect to another HTML page
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
